@@ -1,47 +1,33 @@
 import { StyleSheet, Dimensions } from 'react-native'
+import params from './params';
 
 //Declaração dos estilos
 export default StyleSheet.create({
     container: {
         flex: 1,
-    },
-    buttons: {
-        flexDirection: 'row',
-        flexWrap: "wrap",
-    },
-    button: {
-        fontSize: 35,
-        height: Dimensions.get('window').width / 4,
-        width: Dimensions.get('window').width / 4,
-        padding: 20,
-        backgroundColor: '#f0f0f0',
-        textAlign: 'center',
-        borderWidth: 0.5,
-        borderColor: '#888',
-    },
-    operationbutton: {
-        backgroundColor: '#fa8231',
-        textAlign: 'center',
-        color: '#000000',
-    },
-    display: {
-        flex: 1,
-        padding: 20,
         justifyContent: 'center',
-        backgroundColor: 'rgba(0,0,0,0.6)',
-        alignItems: 'flex-end',
+        alignItems: 'center',
     },
-    displayValue: {
-        fontSize: 50,
-        color: '#fff',
-
+    field: {
+        height: params.blockSize,
+        width: params.blockSize,
+        borderWidth: params.borderSize,
     },
-    buttonDouble: {
-        borderColor: '#000000',
-        width: (Dimensions.get('window').width / 4) * 2
+    regular: {
+        backgroundColor: '#999',
+        borderLeftColor: '#CCC',
+        borderTopColor: '#CCC',
+        borderRightColor: '#333',
+        borderBottomColor: '#333'
     },
-    buttonTriple: {
-        borderColor: '#000000',
-        width: (Dimensions.get('window').width / 4) * 3
+    opened: {
+        backgroundColor: '#999',
+        borderColor: '#777',
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    label: {
+        fontWeight: 'bold',
+        fontSize: params.fontSize
     }
 })
