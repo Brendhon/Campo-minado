@@ -2,9 +2,9 @@ import { Dimensions } from 'react-native'
 
 export default params = {
 
-    blockSize: 30,
+    blockSize: 32,
     borderSize: 5, 
-    fontSize: 15,
+    fontSize: 18,
     hearderRadio: 0.15, //Proporção do Painel Superior na tela
     difficultLevel: 0.1,
     

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View, Text } from 'react-native'
-import styles from './Styles'
+import styles from './components/Styles'
 import Field from './components/Field'
 
 export default class App extends Component {
@@ -13,6 +13,10 @@ export default class App extends Component {
         <Field></Field>
         <Field opened></Field>
         <Field opened nearMines = {3}></Field>
+        <Field mined></Field>
+        <Field mined opened></Field>
+        <Field mined opened exploded></Field>
+        <Field flagged></Field>
       </View>
     )
   }

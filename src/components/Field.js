@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Text } from 'react-native'
-import styles from '../Styles'
+import styles from './Styles'
+import Mine from './Mine'
+import Flag from './Flag'
 
 export default props => {
 
     //Declaração de Variaveis
-    const { mined, opened, nearMines } = props
+    const { mined, opened, nearMines, exploded, flagged } = props
     const styleFild = [styles.field]
     let color = null
 
@@ -13,7 +15,13 @@ export default props => {
     if (opened)
         styleFild.push(styles.opened)
 
-    if (styleFild.length === 1)
+    if (exploded)
+        styleFild.push(styles.exploded)
+
+    if (flagged)
+        styleFild.push(styles.flagged, styles.regular)
+
+    if (!opened && !exploded)
         styleFild.push(styles.regular)
 
     //Dependendo do numeros de minas proximos o label ira receber uma cor diferente
@@ -26,7 +34,11 @@ export default props => {
     if (nearMines >= 6)
         color = '#F221A9'
 
-    const show = () => {
+    const showNum = () => {
+
+        //Outro Método
+        /* {!mined && opened && nearMines > 0 ? <Text style={[style.label, { color: color }]}>
+        {nearMines} </Text> : false} */
 
         if (!mined && opened && nearMines > 0)
             return (
@@ -39,15 +51,33 @@ export default props => {
 
     }
 
+    const showMine = () => {
+
+        if (mined && opened)
+            return (
+                <Mine></Mine>
+            )
+        else
+            return false
+
+    }
+
+    const showFlag = () => {
+
+        if (flagged && !opened)
+            return (
+                <Flag></Flag>
+            )
+        else
+            return false
+
+    }
+
     return (
         <View style={styleFild}>
-            {/* Caso não tenha mina, o campo esteja aberto e o numero de minas 
-            proximas forem maior que '0' sera mostrado numero de minas proximo */}
-            {/* !mined && opened && nearMines > 0 ?
-                <Text style={[style.label, { color: color }]}>
-                    {nearMines}
-                </Text> : false */}
-            {show()}
+            {showNum()}
+            {showMine()}
+            {showFlag()}
         </View>
     )
 }
