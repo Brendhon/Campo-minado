@@ -17,7 +17,7 @@ export default params = {
         return Math.floor(width / this.blockSize)
     },
 
-    getRownsAmount(){
+    getRowsAmount(){
 
         //Pega a Altura total disponivel da janela 
         const height = (Dimensions.get('window').height)*0.85

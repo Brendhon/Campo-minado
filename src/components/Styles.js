@@ -103,4 +103,15 @@ export default StyleSheet.create({
         marginLeft: 8,
         marginTop: 24,
     },
+    containerMineField: {
+        backgroundColor: '#EEE',
+    },
+    containerApp: {
+        flex: 1,
+        justifyContent:'flex-end',
+    },
+    board: {
+        alignItems: 'center',
+        backgroundColor: '#AAA'
+    }
 })
