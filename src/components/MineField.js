@@ -15,7 +15,7 @@ export default props => {
 
         //Armazena as colunas JSX na constante 'columns'
         const columns = row.map((field, c) => {
-            return <Field {...field} key={c}></Field>
+            return <Field {...field} key={c} onOpen={() => props.onOpenField(r, c)} onFlag = {() => props.onFlagField(r, c)}></Field>
         })
         return <View key={r} style={{flexDirection: 'row'}}>
             {columns}

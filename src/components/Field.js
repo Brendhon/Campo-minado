@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, TouchableWithoutFeedback } from 'react-native'
 import styles from './Styles'
 import Mine from './Mine'
 import Flag from './Flag'
@@ -74,10 +74,12 @@ export default props => {
     }
 
     return (
-        <View style={styleFild}>
-            {showNum()}
-            {showMine()}
-            {showFlag()}
-        </View>
+        <TouchableWithoutFeedback onPress={props.onOpen} onLongPress = {props.onFlag}>
+            <View style={styleFild}>
+                {showNum()}
+                {showMine()}
+                {showFlag()}
+            </View>
+        </TouchableWithoutFeedback>
     )
 }

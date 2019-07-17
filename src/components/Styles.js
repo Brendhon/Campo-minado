@@ -55,7 +55,7 @@ export default StyleSheet.create({
         position: 'absolute',
         height: 16,
         width: 3,
-        backgroundColor:'#222',
+        backgroundColor: '#222',
         marginLeft: 9
     },
     flag: {
@@ -63,7 +63,7 @@ export default StyleSheet.create({
         height: 7,
         width: 8,
         backgroundColor: '#F22',
-        marginLeft: 3  
+        marginLeft: 3
     },
     base1: {
         position: 'absolute',
@@ -89,7 +89,7 @@ export default StyleSheet.create({
     flagBigger: {
         height: 10,
         width: 14,
-        marginLeft: 3  
+        marginLeft: 3
     },
     base1Bigger: {
         height: 4,
@@ -108,10 +108,75 @@ export default StyleSheet.create({
     },
     containerApp: {
         flex: 1,
-        justifyContent:'flex-end',
+        justifyContent: 'flex-end',
     },
     board: {
         alignItems: 'center',
         backgroundColor: '#AAA'
+    },
+    containerHeader: {
+        flex: 1,
+        flexDirection: 'row',
+        backgroundColor: '#EEE',
+        alignItems: 'center',
+        justifyContent: 'space-around',
+        paddingTop: 20,
+        paddingHorizontal: 20,
+    },
+    flagContainer: {
+        flexDirection: 'row'
+    },
+    flagButton: {
+        marginTop: 10,
+        minWidth: 30
+    },
+    flagsLeft: {
+        fontSize: 30,
+        fontWeight: 'bold',
+        paddingTop: 5,
+        marginLeft: 20,
+    },
+    button: {
+        backgroundColor: '#999',
+        padding: 5,
+    },
+    buttonLabel: {
+        fontSize: 20,
+        color: '#DDD',
+        fontWeight: 'bold',
+    },
+    frame: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0,0,0,0.6)',
+    },
+    containerLevel: {
+        backgroundColor: '#EEE',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: 15,
+    },
+    title: {
+        fontSize: 30,
+        fontWeight: 'bold',
+    },
+    buttonLevel: {
+        marginTop: 10,
+        padding: 5,
+    },
+    buttonLabelLevel: {
+        fontSize: 20,
+        color: '#EEE',
+        fontWeight: 'bold',
+    },
+    bgEasy: {
+        backgroundColor: '#49b65d'
+    },
+    bgNormal: {
+        backgroundColor: '#2765F7'
+    },
+    bgHard: {
+        backgroundColor: '#F26337'
     }
 })
